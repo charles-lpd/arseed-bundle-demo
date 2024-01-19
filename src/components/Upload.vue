@@ -108,8 +108,12 @@ export default {
         reader.onload= async ()=> {
           const data = reader.result
           const ops = {
-            tags: [{name: "FileName", value:file.name},{name: "Content-Type",value:file.raw.type},{name:"eid", value: genEverId(this.instance.addr)}]
+            tags: [{name: "FileName", value:file.name},{name: "Content-Type",value:file.raw.type}]
           }
+          if(isSmartAccount(this.instance.addr)){
+            ops.tags.push({name:"eid", value: genEverId(this.instance.addr)})
+          }
+          console.log(data, 'data')
           const res = await this.instance.sendAndPay(this.arseedUrl, data, token.tag, ops)
           console.log(res, 'res demo')
           this.submitResp = JSON.stringify(res)
