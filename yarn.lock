@@ -2238,10 +2238,10 @@ aproba@^1.1.1:
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
   integrity sha512-Y9J6ZjXtoYh8RnXVCMOU/ttDmk1aBjunq9vO0ta5x85WDQiQfUF9sIPBITdbiiIVcBo03Hi3jMxigBtsddlXRw==
 
-arbundles-fido@^0.0.17:
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/arbundles-fido/-/arbundles-fido-0.0.17.tgz#e6c356a4010208a12e4af6d8ad62ca8b21f172a4"
-  integrity sha512-A9vK+DKLiSIYOPSFeVqcxQlcCzOoKsM+D3vrFo8VMw1eMvvX4kdA6nQqh1U1Oxv+PLm91J6aNQXUFPjBzLc55g==
+arbundles-fido@^0.0.26:
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/arbundles-fido/-/arbundles-fido-0.0.26.tgz#e59684c7226b150140373b7c281c05b02184e7d1"
+  integrity sha512-jjdVFgCpvGKPNVSP3hIICe9F/Zjd6Ap5w5OsS1hhI+MAzP8Im5cKp3TORUxMJN9croietRatCpqPpi7vZXKDPw==
   dependencies:
     "@noble/ed25519" "^1.6.1"
     "@randlabs/myalgo-connect" "^1.1.2"
@@ -2365,13 +2365,13 @@ arseeding-arbundles@0.6.27:
     ts-node "^10.5.0"
     tslib "^2.3.0"
 
-arseeding-js-fido@^0.0.20:
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/arseeding-js-fido/-/arseeding-js-fido-0.0.20.tgz#dbd2425b9d7537f835f7ea316667dd7b2428e8f7"
-  integrity sha512-mHc3oMqLJ/ufivKVE3x9KZct1RdNlEdl1KR/mAEQapcOnZ2MU+YTQO49eFENsa+SSX3mJTuK2axQ+Z5KYU/zbA==
+arseeding-js-fido@^0.0.28:
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/arseeding-js-fido/-/arseeding-js-fido-0.0.28.tgz#18bf6978ed9b3bf8df0ff7d1910d5ce9f528facd"
+  integrity sha512-bDNp7VJ35lQL3JSxRJ1zJHYXzNODxQ331l9gVET7bBlkWFKUEyz7GGy8VzZ4icZfvQ0ax35IEAboXmaaFVQhkA==
   dependencies:
     "@supercharge/promise-pool" "^2.3.2"
-    arbundles-fido "^0.0.17"
+    arbundles-fido "^0.0.26"
     arseeding-arbundles "0.6.27"
     axios "^0.21.1"
     bignumber.js "^9.0.2"

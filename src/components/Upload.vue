@@ -41,9 +41,11 @@
 <script>
 import pubsub from 'pubsub-js'
 import Everpay from 'everpay'
-import { getBundleFee, getOrders, getTokenTagByEver } from 'arseeding-js'
-import Bignumber from 'bignumber.js'
+// import { getBundleFee, getOrders, getTokenTagByEver } from 'arseeding-js'
+import { getOrders, getTokenTagByEver } from 'arseeding-js'
+// import Bignumber from 'bignumber.js'
 import { genEverId, isSmartAccount } from 'everpay/esm/utils/util'
+// import { getWebAuthAPI } from 'arseeding-js-fido'
 import { getWebAuthAPI } from 'arseeding-js-fido'
 function  getArseedUrl() {
   let arseedUrl = "https://arseed.web3infra.dev"
@@ -98,8 +100,10 @@ export default {
       const file = files[files.length - 1]
       console.log('file.size', file.size)
       const token = this.symbols.find((t)=> t.symbol === this.selectedSymbol)
-      const fee = await getBundleFee(this.arseedUrl, file.size, token.symbol)
-      const formatedFee = new Bignumber(fee.finalFee).dividedBy(new Bignumber(10).pow(fee.decimals)).toString()
+      // const fee = await getBundleFee(this.arseedUrl, file.size, token.symbol)
+      // const fee = await getBundleFee(this.arseedUrl, file.size, token.symbol)
+      // const formatedFee = new Bignumber(fee.finalFee).dividedBy(new Bignumber(10).pow(fee.decimals)).toString()
+      const formatedFee = '0'
       console.log(formatedFee, 'formatedFee')
       console.log(this.balance, 'this.balance')
       if (+this.balance >= +formatedFee) {
