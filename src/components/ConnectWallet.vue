@@ -111,14 +111,25 @@ export default {
     async test2(){
       // const everpay = await new Everpay({debug:true}).smartAccountAuth('https://app-dev.permaswap.network/permalogo.svg')
       // console.log(everpay)
-      const sig = await signMessageAsync({debug:true,isSmartAccount:true,account:'17326091635@163.com'},'[fujfjgjgb]12312312312312323123123,fujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgb')
-      console.log(sig)
-      console.log(base64Url.toBuffer(sig.sig))
-      console.log(Buffer.from(sig.sig))
-      console.log(new Uint8Array(Buffer.from(sig.sig)))
-      console.log(base64Url.toBase64(new Uint8Array(Buffer.from(sig.sig))))
-      console.log(base64Url.toBase64(base64Url.toBuffer(sig.sig)))
-      console.log(base64Url.toBuffer(sig), 'b')
+      // const sig = await signMessageAsync({debug:true,isSmartAccount:true,account:'17326091635@163.com'},'[fujfjgjgb]12312312312312323123123,fujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbffujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbfujfjgjgbujfjgjgbfujfjgjgb')
+      // console.log(sig)
+      // console.log(base64Url.toBuffer([sig.sig.slice(',')[0],sig.everHash].join(',')))
+      // console.log(Buffer.from([sig.sig.slice(',')[0],sig.everHash].join(',')))
+      // console.log(Buffer.from(Buffer.from([sig.sig.slice(',')[0],sig.everHash].join(','))))
+      // console.log(base64Url.encode(Buffer.from([sig.sig.slice(',')[0],sig.everHash].join(','))))
+      // const uint8Array = new TextEncoder().encode([sig.sig.slice(',')[0],sig.everHash].join(','));
+      // const buffer = Buffer.from(uint8Array);
+      // const encodedString = base64Url.encode(buffer);
+      // console.log(encodedString)
+
+      // const sign = [sig.sig.split(',')[0],sig.everHash].join(',')
+      // console.log(sign)
+      // const buffer = Buffer.from(sign);
+      // const encodedString = base64Url.encode(buffer);
+      // console.log(encodedString); // 输出：c3RyYSwxMjM=
+      const decodedBuffer = base64Url.toBuffer('ZXlKcFpDSTZJblZDVmkxaGMzaDBhM0pyVTB4bWIzcHFWa051WDFFaUxDSnlZWGRKWkNJNkluVkNWaTFoYzNoMGEzSnJVMHhtYjNwcVZrTnVYMUVpTENKamJHbGxiblJFWVhSaFNsTlBUaUk2SW1WNVNqQmxXRUpzU1dwdmFXUXlWbWxaV0ZZd1lVYzBkVm95VmpCSmFYZHBXVEpvYUdKSGVHeGliV1JzU1dwdmFWUlZhRzVOUlRSNVYxUlNUMVpHYkRSVVdIQldUVVp3UlZadGFGcFdSbHB5VjIxd2NrNVdjRlZaTTNCUVVqQnJlRlF4VW01bFZURlZXWHBPV21GdGREUlViR1JMWWxac1ZXRXpaRnBOYkZWNlYyeGtXbVZyT1VoWFZFWk9Wa1ZyZVZSc1pHRmlWbXcyVmxST1VGWkhjekJYVmxKR1pXbEpjMGx0T1hsaFYyUndZbWxKTmtsdGFEQmtTRUo2VDJrNGRsbHRWakJaVXpGcldsaFpkVnBZV214amJrSm9aVk0xY0dKNVNYTkpiVTU1WWpOT2VsUXpTbkJhTW14MVNXcHdiVmxYZUhwYVdEQWlMQ0poZFhSb1pXNTBhV05oZEc5eVJHRjBZU0k2SW0xTU5uTkVUVmhETTBwUldGbGZZbTFpYTNCWFEwNVNSa2x0TlZWUGRUZzJTakl4VURSU1pUaFZTRkZrUVVGQlFVRkJJaXdpYzJsbmJtRjBkWEpsSWpvaVRVVlZRMGxCTUVoSVJXNXRUbkF3VTJGa2RIbElPRmwyY3psTWFHUnRjSGRVVjNCRmVYQlpMWFJIZGpFMlNUSTJRV2xGUVhsMFVWQkRkMmxYVVhCUWIzRkROVXBCZFVRM1VWRkZOM3BpUkhScGNIZEZUR2hOTmxJMmVHMDVkR2NpTENKMWMyVnlTR0Z1Wkd4bElqb2liVWhaVVdOUlVFVkhabEJIV0ZFaWZRPT0sMHg0N2Y4NTYxMzU0ZDVhYTVkZjk5ZTczOGI1OTgyMTc3YjkxNWJmYTkwY2U3ZWYzOGY1MTI2NWZmYzU3OTk4YTEz');
+      const decodedStr = decodedBuffer.toString();
+      console.log(decodedStr); // 输出：stra,123
     },
     async test3(){
       try{
