@@ -62,6 +62,7 @@ export default {
           debug:true
         })
         const params = {
+          websiteLogo: 'https://app-dev.permaswap.network/permalogo.svg',
           everpay: everpay,
           publicKey: 'eyJJRCI6IjBIMGZjWWwwRHJyZjQveGo0L0RMYlpFajhud1JsZUMxcmFVSTN0Qm8rblU9IiwiUHVibGljS2V5IjoicFFFQ0F5WWdBU0ZZSUZYK1VaWENqRlZ2ajVucE0xME56ZzdjYmQ2bkVISjFLOVg4M3RnejFmM3VJbGdnUWFrWHJWeXptMkc0WndzUEZUSjR2dEVDcFpqTEpDelAzNlZBbWpFYVFtST0iLCJBdHRlc3RhdGlvblR5cGUiOiJwYWNrZWQiLCJUcmFuc3BvcnQiOlsiaW50ZXJuYWwiXSwiRmxhZ3MiOnsiVXNlclByZXNlbnQiOnRydWUsIlVzZXJWZXJpZmllZCI6dHJ1ZSwiQmFja3VwRWxpZ2libGUiOmZhbHNlLCJCYWNrdXBTdGF0ZSI6ZmFsc2V9LCJBdXRoZW50aWNhdG9yIjp7IkFBR1VJRCI6InJjNEFBalc4eGdwa2l3c2w4ZkJWQXc9PSIsIlNpZ25Db3VudCI6MCwiQ2xvbmVXYXJuaW5nIjpmYWxzZSwiQXR0YWNobWVudCI6InBsYXRmb3JtIn19',
           debug:true
@@ -157,15 +158,21 @@ export default {
         console.log(e)
       }
     },
+    getEverpayHost(debug){
+      return debug === true ? 'https://api-dev.everpay.io' : 'https://api.everpay.io' 
+    },
     async getWebAuthAPITest(params){
       const account = await params.everpay.smartAccountAuth('https://app-dev.permaswap.network/permalogo.svg')
+      const publickeyInfo = await axios.get(`${this.getEverpayHost(params.debug)}/account/${genEverId(account)}`)
+      const publicKey = Object.values(publickeyInfo.data.publicValues)[0]
+      console.log(publicKey)
       const everpayT = new Everpay({
         account,
         isSmartAccount: true
       })
      const a = {
        everpay: { ...everpayT, signMessageAsync },
-       publicKey: params.publicKey,
+       publicKey: publicKey,
        account: account,
        debug: params.debug
      }
@@ -206,7 +213,7 @@ export default {
           }
         }
       }
-    }
+    },
   }
 }
 </script>

@@ -2238,10 +2238,35 @@ aproba@^1.1.1:
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
   integrity sha512-Y9J6ZjXtoYh8RnXVCMOU/ttDmk1aBjunq9vO0ta5x85WDQiQfUF9sIPBITdbiiIVcBo03Hi3jMxigBtsddlXRw==
 
-arbundles-fido@^0.0.28:
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/arbundles-fido/-/arbundles-fido-0.0.28.tgz#ef58a7c240f50767f31d573842f809b9f2c229ba"
-  integrity sha512-NQYAjrsG7gzXC1JHRXkBX0llNiQqPT6NOsnfxnMLrqD6EQFtAtzRwDZl6k3EPhdRijUG8u1Ogls/nAYl0XF3Gw==
+arbundles-fido@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/arbundles-fido/-/arbundles-fido-0.1.0.tgz#3f1247e433d3a19c4139173dcfbfc73aec635391"
+  integrity sha512-qJj2WOPaZP40UFfVUI3CjYHCVhZexOD4kfwT4c3HDJ+i3VzobN/1EfMej4UtylWI1wDXj4bmE1esahft+4VYeQ==
+  dependencies:
+    "@noble/ed25519" "^1.6.1"
+    "@randlabs/myalgo-connect" "^1.1.2"
+    "@solana/wallet-adapter-base" "^0.9.2"
+    algosdk "^1.13.1"
+    arweave "=1.11.8"
+    arweave-stream-tx "^1.1.0"
+    avsc "https://github.com/Bundlr-Network/avsc#csp-fixes"
+    axios "^0.21.3"
+    base64url "^3.0.1"
+    bs58 "^4.0.1"
+    crypto-browserify "^3.12.0"
+    ethers "^5.5.1"
+    keccak "^3.0.2"
+    multistream "^4.1.0"
+    process "^0.11.10"
+    secp256k1 "^4.0.2"
+    tmp-promise "^3.0.2"
+    ts-node "^10.5.0"
+    tslib "^2.3.0"
+
+arbundles-fido@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/arbundles-fido/-/arbundles-fido-0.1.1.tgz#dc6ea78e50d8261f90af42c51bf3aabc3adfe675"
+  integrity sha512-i0IK0ifzfMrw9RhQ7BMmW3YtS+A+dUmti1Q93aqmxRWl7l4LKbrEYGrGFQansQQDTEKYXodmUC1x/OLxfDqW8Q==
   dependencies:
     "@noble/ed25519" "^1.6.1"
     "@randlabs/myalgo-connect" "^1.1.2"
@@ -2365,13 +2390,13 @@ arseeding-arbundles@0.6.27:
     ts-node "^10.5.0"
     tslib "^2.3.0"
 
-arseeding-js-fido@^0.0.30:
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/arseeding-js-fido/-/arseeding-js-fido-0.0.30.tgz#7787040f01683b11c9288c7eb0dcacfe755d6118"
-  integrity sha512-UMXQBofe8Oyd+d/8Or3GyzpSvqJKY371ZznoDrSBgLvLrmHa3pfEN4rlu+Lz87Ibq3EG5K/sJpY67Wwb6UD8GA==
+arseeding-js-fido@^0.1.0:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/arseeding-js-fido/-/arseeding-js-fido-0.1.1.tgz#27e3cfc0a1f762604f703a7245032a48270314b3"
+  integrity sha512-7nxHJ5bVmvtYKNEX55b3rotPUbKoGkSgvzpxkvqxJKOZ58+AF7Nl/rW8rKGKp8CgZmPwcQSMpgC4njKHOJ3AFA==
   dependencies:
     "@supercharge/promise-pool" "^2.3.2"
-    arbundles-fido "^0.0.28"
+    arbundles-fido "^0.1.0"
     arseeding-arbundles "0.6.27"
     axios "^0.21.1"
     bignumber.js "^9.0.2"
